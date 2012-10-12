@@ -73,7 +73,20 @@ describe('Redshed', function () {
     })
 
     it('removes from the schedule', function (done) {
-      done()
+      var invoked = false
+      var item = { _id: 100, frequency: '1 second' }
+      scheduler.processer = function () { invoked = true }
+      scheduler.add(item, function (err, reply) {
+        scheduler.remove(100, function () {
+          client.get(scheduler.prefix + '100', function (err, result) {
+            assert(!result)
+            client.zcard(scheduler.prefix, function (err, answer) {
+              assert.equal(answer, 0)
+              done()
+            })
+          })
+        })
+      })
     })
 
     beforeEach(function () {
