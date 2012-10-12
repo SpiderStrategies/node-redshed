@@ -52,7 +52,7 @@ describe('Redshed', function () {
 
     it('invokes caller processor', function (done) {
       var invoked = false
-      scheduler.processor = function () { invoked = true}
+      scheduler.processor = function (item, cb) { invoked = true; cb()}
       scheduler.process({_id: 1}, function () {
         assert(invoked)
         done()
@@ -64,8 +64,9 @@ describe('Redshed', function () {
       var called = 0
       var faster = new Redshed({
         poll: 20,
-        process: function (i) {
+        process: function (i, cb) {
           assert.deepEqual(item, i)
+          cb()
           if (++called === 2) { done() }
         }
       })

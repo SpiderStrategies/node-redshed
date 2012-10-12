@@ -20,9 +20,10 @@ Create a scheduler
 var Redshed = require('redshed')
 
 scheduler = new Redshed({
-  process: function (item) {
+  process: function (item, cb) {
     // When an item is ready, this callback is fired
     // (Add to a job queue, or whatever)
+    // Invoke the callback when you're done processing, so we can reschedule
   }
 })
 
