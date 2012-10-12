@@ -10,12 +10,20 @@
     "type": "git",
     "url": "git://github.com/SpiderStrategies/node-redshed.git"
   },
-  "keywords": [ "scheduler", "cron", "frequency", "redis" ],
+  "keywords": [
+    "scheduler",
+    "cron",
+    "frequency",
+    "redis"
+  ],
   "author": "Nathan Bowser <nathan.bowser@spiderstrategies.com>",
   "license": "BSD",
   "dependencies": {
     "redis": "~0.8.1",
     "frequency": "0.0.1",
     "moment": "~1.7.2"
+  },
+  "devDependencies": {
+    "mocha": "~1.6.0"
   }
 }
