@@ -16,6 +16,18 @@ describe('Redshed', function () {
       assert.equal(scheduler.identifier, '_id')
     })
 
+    it('does not poll', function (done) {
+      var called = 0
+      var origin = Redshed.prototype.poll
+      Redshed.prototype.poll = function () { called++ }
+      var s = new Redshed({ process: function () {}, poll: 10 }, false)
+      setTimeout(function () {
+        assert.equal(called, 0)
+        Redshed.prototype.poll = origin
+        done()
+      }, 100)
+    })
+
     it('polls', function (done) {
       var called = 0
       var origin = Redshed.prototype.poll
