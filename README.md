@@ -39,6 +39,19 @@ scheduler.add({
 })
 ```
 
+## Web app
+
+You can view the scheduler by loading the app:
+
+```
+var app = require('redshed').app(<scheduler options>)
+
+var server = app.listen(3015)
+// Lame, I know
+app.initsock(server)
+
+```
+
 ## Options
 When you create the scheduler, you must pass it options:
 
