@@ -1,2 +1,2 @@
 
-module.exports = require('./lib/scheduler')
+module.exports = require('./lib/redshed')
