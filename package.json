@@ -1,6 +1,6 @@
 {
   "name": "redshed",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A scheduler system backed by redis",
   "main": "index.js",
   "scripts": {
@@ -21,7 +21,14 @@
   "dependencies": {
     "redis": "~0.8.1",
     "frequency": "0.0.1",
-    "moment": "~1.7.2"
+    "moment": "~1.7.2",
+    "express": "~3.0.0rc5",
+    "jade": "~0.27.6",
+    "browserify": "~1.16.1",
+    "shoe": "0.0.7",
+    "domready": "~0.2.11",
+    "event-stream": "~3.0.7",
+    "async": "~0.1.22"
   },
   "devDependencies": {
     "mocha": "~1.6.0"

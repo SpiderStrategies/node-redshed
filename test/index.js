@@ -68,9 +68,14 @@ describe('Redshed', function () {
           assert.deepEqual(item, i)
           cb()
           if (++called === 2) { done() }
-        }
+        },
+        prefix: 'rs:test3'
       })
       faster.add(item)
+
+      afterEach(function () {
+        faster.clear()
+      })
     })
 
     it('removes from the schedule', function (done) {
@@ -108,8 +113,8 @@ describe('Redshed', function () {
 
       assert(!next('7 foobars'))
       assert(next(7))
-      assert.equal(typeof next('7'), 'number')
-      assert.equal(next('7'), 7)
+      assert.equal(next('7'), Math.floor(new Date().setSeconds(now.getSeconds() + 7) / 1000))
+      assert.equal(next(5), Math.floor(new Date().setSeconds(now.getSeconds() + 5) / 1000))
     })
 
   })
