@@ -1,6 +1,6 @@
 {
   "name": "redshed",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "A scheduler system backed by redis",
   "main": "index.js",
   "scripts": {
