@@ -1,6 +1,6 @@
 {
   "name": "redshed",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "A scheduler system backed by redis",
   "main": "index.js",
   "scripts": {
@@ -19,7 +19,7 @@
   "author": "Nathan Bowser <nathan.bowser@spiderstrategies.com>",
   "license": "BSD",
   "dependencies": {
-    "redis": "~0.8.1",
+    "redis": "~0.8.2",
     "frequency": "0.0.1",
     "moment": "~1.7.2",
     "express": "~3.0.0rc5",
