@@ -1,6 +1,6 @@
 {
   "name": "redshed",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "A scheduler system backed by redis",
   "main": "index.js",
   "scripts": {
@@ -19,11 +19,11 @@
   "author": "Nathan Bowser <nathan.bowser@spiderstrategies.com>",
   "license": "BSD",
   "dependencies": {
-    "redis": "~0.8.2",
+    "redis": "~0.8.4",
     "frequency": "0.0.1",
-    "moment": "~1.7.2",
-    "express": "~3.0.0rc5",
-    "jade": "~0.27.6",
+    "moment": "~2.0.0",
+    "express": "~3.3.4",
+    "jade": "*",
     "browserify": "~1.16.1",
     "shoe": "0.0.7",
     "domready": "~0.2.11",
@@ -31,6 +31,6 @@
     "async": "~0.1.22"
   },
   "devDependencies": {
-    "mocha": "~1.6.0"
+    "mocha": "~1.12.0"
   }
 }
